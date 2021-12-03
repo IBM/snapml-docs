@@ -1,2 +1,2 @@
 numpydoc
-snapml==1.8.0
+snapml==1.7.8
