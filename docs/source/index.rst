@@ -12,8 +12,6 @@ Snap ML is a library for Machine Learning. The following models currently are su
    * :doc:`decision_trees` (regression, classification)
    * :doc:`random_forests` (regression, classification)
    * :doc:`boosting_machines` (regression, classification)
-   * :doc:`batched_tree_ensembles` (regression, classification)
-
 
 .. toctree::
    :maxdepth: 1
@@ -35,4 +33,3 @@ Snap ML is a library for Machine Learning. The following models currently are su
    decision_trees
    random_forests
    boosting_machines
-   batched_tree_ensembles
