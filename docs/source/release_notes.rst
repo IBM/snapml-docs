@@ -3,6 +3,17 @@ Release Notes
 
 The latest stable version of Snap ML is available at https://pypi.org/project/snapml/.
 
+Snap ML v1.8.3 (Dec. 10, 2021)
+=================================
+
+API changes:
+
+- Added option to enable/disable optimized inference for MultiOutputCalibratedClassifier
+
+Bug-fixes:
+
+- MultiOutputCalibratedClassifier now returns self
+
 Snap ML v1.8.2 (Dec. 7, 2021)
 =================================
 
