@@ -3,6 +3,15 @@ Release Notes
 
 The latest stable version of Snap ML is available at https://pypi.org/project/snapml/.
 
+Snap ML v1.8.2 (Dec. 7, 2021)
+=================================
+
+Bug-fixes:
+
+- Fix segfault for cross entropy loss and early stopping.
+- Fix issue with class weights and BoostingMachineClassifier.
+
+
 Snap ML v1.8.1 (Dec. 2, 2021)
 =================================
 
