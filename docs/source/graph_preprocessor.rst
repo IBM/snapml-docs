@@ -15,4 +15,27 @@ Such additional features can significantly increase the predictive power of mach
   :align: center
   :alt: Graph feature extraction 
 
+The current version of the GraphFeaturePreprocessor is specialised to operate on temporal graphs. 
+More specifically, the graph edges must have timestamps. Furthermore, each edge must have a unique id. 
+The edge list must be provided as a two dimensional numpy array of floating point numbers.
+The first column must be `Edge id`, the second `Source vertex id`, the third `Target vertex id`, and the fourth `Timestamp`.     
+Additional columns can be used to store additional edge features.
+
++-------------------+-------------------+-------------------+-------------------+------------------+-------------------+
+| Edge id           | Source vertex id  | Target vertex id  | Timestamp         |  Other Feature   | Other Feature     |
++===================+===================+===================+===================+==================+===================+
+| 1000              | 1                 | 2                 | 10                |                  |                   |
++-------------------+-------------------+-------------------+-------------------+------------------+-------------------+
+| 3000              | 3                 | 4                 | 20                |                  |                   |
++-------------------+-------------------+-------------------+-------------------+------------------+-------------------+
+| 2000              | 1                 | 4                 | 20                |                  |                   |
++-------------------+-------------------+-------------------+-------------------+------------------+-------------------+
+| 4000              | 3                 | 2                 | 30                |                  |                   |
++-------------------+-------------------+-------------------+-------------------+------------------+-------------------+
+
+The edge list must be sorted in the ascending order of the timestamps for best performance. 
+An in-memory directed multi-graph representation will be created when the edge list is provided as input to the `fit` function.
+The `transform` function, on the other hand, receives an edge list as input, inserts the new edges into the in-memory graph,
+and extracts new features from the graph, which are appended to the input edge list as additional columns to form the output of this function.   
+
 .. autofunction:: snapml.GraphFeaturePreprocessor
