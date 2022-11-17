@@ -34,8 +34,8 @@ Additional columns can be used to store additional edge features.
 +-------------------+-------------------+-------------------+-------------------+------------------+-------------------+
 
 The edge list must be sorted in the ascending order of the timestamps for best performance. 
-An in-memory directed multi-graph representation will be created when the edge list is provided as input to the `fit` function.
-The `transform` function, on the other hand, receives an edge list as input, inserts the new edges into the in-memory graph,
+An in-memory directed multi-graph representation will be created internally when an edge list is provided as input to the `fit` function.
+The `transform` function, on the other hand, receives an edge list as input, inserts these edges into the in-memory graph,
 and extracts new features from the graph, which are appended to the input edge list as additional columns to form the output of this function.   
 
 .. autofunction:: snapml.GraphFeaturePreprocessor
