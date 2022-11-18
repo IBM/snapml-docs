@@ -1,14 +1,15 @@
-Graph-Based Feature Extraction
-==============================
+Real-Time Feature Extraction
+============================
 
-The GraphFeaturePreprocessor is a scikit-learn compatible preprocessor that enables feature extraction from graph-structured data.  
-It provides utilities for creating, updating, and extracting features from graph-structured data. 
+The GraphFeaturePreprocessor is a scikit-learn compatible preprocessor that enables scalable and real-time feature extraction from graph-structured data.  
+It provides utilities for creating and updating in-memory graphs as well as extracting new features from these graphs. 
 The basic input and output data representation used by GraphFeaturePreprocessor is an edge list with edge features.
 As an example, in a financial transaction graph, the graph nodes represent accounts and the graph edges represent transactions.
 The date of the transactions as well as the amount transferred between the accounts may be provided as edge features.
-However, the GraphFeaturePreprocessor can generate a much richer set of edge features by analyzing the graph topology.   
-For instance, the GraphFeaturePreprocessor can extract the number of cycles each transaction is a part of in the graph.
-Such additional features can significantly increase the predictive power of machine learning models in practical settings. 
+However, the GraphFeaturePreprocessor can generate a much richer set of edge features by analyzing the graph topology and extracting meaningful substructures.   
+For instance, the GraphFeaturePreprocessor can extract the number of cycles each transaction is part of in the graph.
+Such additional features can significantly increase the predictive power of machine learning models in practical settings,
+e.g., when monitoring suspicious transactions and account activities in financial transaction graphs. 
 
 .. image:: graph-feature-extraction.png
   :width: 800
