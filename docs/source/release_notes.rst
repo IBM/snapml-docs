@@ -116,6 +116,74 @@ New features:
 
 - New matrix-based algorithms for tree-ensemble inference using zDNN library (available for Z16 systems only).
 
+
+Snap ML v1.8.12 (Oct. 28, 2022)
+=================================
+
+Bug fixes:
+
+- BatchedTreeEnsemble: handle case when some classes are not present in batch.
+
+Snap ML v1.8.11 (Oct. 18, 2022)
+=================================
+
+Packaging changes:
+
+- Make numpy dependency conditional on Python version.
+
+Snap ML v1.8.10 (Sep. 15, 2022)
+=================================
+
+Features:
+
+- Python 3.10 support.
+
+Bug fixes:
+
+- Do not print NUMA warnings on machines where no NUMA nodes are configured.
+
+Packaging notes:
+
+- Linux/x86 wheels are now built with manylinux2014 platform tag (manylinux2010 reached EOL in 2020).
+- Runtime numpy dependency is now numpy>=1.21.3 since this is the oldest release that supports Python 3.7, 3.8, 3.9 and 3.10.
+
+Snap ML v1.8.9 (Aug. 11, 2022)
+=================================
+
+Bug-fixes:
+
+- Fix overflow issue for heterogeneous BoostingMachines on very large data.
+- Support for RBF kernels in MultiOutputCalibratedClassifier. 
+
+Snap ML v1.8.8 (Jul. 20, 2022)
+=================================
+
+Bug-fixes:
+
+- Better handling of default SnapRandomForest inside BatchedTreeEnsemble.
+
+Snap ML v1.8.7 (Jun. 20, 2022)
+=================================
+
+Bug-fixes:
+
+- Improved classes logic in BatchedTreeEnsemble.
+
+Snap ML v1.8.6 (Jun. 16, 2022)
+=================================
+
+Bug-fixes: 
+
+- Add base score computation to BatchedTreeEnsemble.
+- Fix issue with binary incompatibility between Linux/MacOS and Windows.
+
+Snap ML v1.8.5 (Apr. 22, 2022)
+=================================
+
+Bug-fixes:
+
+- BatchedTreeEnsemble: call to fit is now equivalent to calling partial_fit on first batch.
+
 Snap ML v1.8.4 (Feb. 24, 2022)
 =================================
 
@@ -179,13 +247,6 @@ Bug-fixes:
 - Fix issue when deepcopying estimators that were not yet fitted.
 - Fix documentation in BoostingMachineClassifier.
 
-Snap ML v1.7.8 (Nov. 19, 2021)
-==================================
-
-Bug-fixes:
-
-* Support older machines that do not have AVX2 instructions.
-
 Snap ML v1.8.0 (Nov. 11, 2021)
 ==================================
 
@@ -214,6 +275,12 @@ Bug-fixes:
 * Fixed segfault when calling decision_function for multiclass SVM.
 * Fixed memory issue for boosting machines with subsample<1.
 
+Snap ML v1.7.8 (Nov. 19, 2021)
+==================================
+
+Bug-fixes:
+
+* Support older machines that do not have AVX2 instructions.
 
 Snap ML v1.7.7 (Jul. 21, 2021)
 ==============================
