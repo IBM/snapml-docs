@@ -133,13 +133,6 @@ Bug-fixes:
 - Fix issue when deepcopying estimators that were not yet fitted.
 - Fix documentation in BoostingMachineClassifier.
 
-Snap ML v1.7.8 (Nov. 19, 2021)
-==================================
-
-Bug-fixes:
-
-* Support older machines that do not have AVX2 instructions.
-
 Snap ML v1.8.0 (Nov. 11, 2021)
 ==================================
 
@@ -168,6 +161,12 @@ Bug-fixes:
 * Fixed segfault when calling decision_function for multiclass SVM.
 * Fixed memory issue for boosting machines with subsample<1.
 
+Snap ML v1.7.8 (Nov. 19, 2021)
+==================================
+
+Bug-fixes:
+
+* Support older machines that do not have AVX2 instructions.
 
 Snap ML v1.7.7 (Jul. 21, 2021)
 ==============================
