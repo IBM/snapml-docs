@@ -39,7 +39,7 @@ Snap ML is a library for Machine Learning. The following models currently are su
    multioutput_calibrated_classifier
 
 .. toctree::
-   :caption: Graph Preprocessor
+   :caption: Graph Toolkit
    :maxdepth: 1
    :hidden:
 
