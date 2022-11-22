@@ -3,6 +3,85 @@ Release Notes
 
 The latest stable version of Snap ML is available at https://pypi.org/project/snapml/.
 
+Snap ML v1.9.7 (Oct. 25, 2022)
+=================================
+
+Bug fixes:
+
+- Raise exception when importing PMML that contains no trees.
+
+Snap ML v1.9.6 (Oct. 20, 2022)
+=================================
+
+Packaging changes:
+
+- Make numpy dependency conditional on Python version.
+
+
+Snap ML v1.9.5 (Oct. 7, 2022)
+=================================
+
+Bug fixes:
+
+- Used features lists features in the same order that they appear in schema.
+
+
+Snap ML v1.9.4 (Sep. 24, 2022)
+=================================
+
+New features:
+
+- Populate schema_ attribute when importing PPML models via generic import API.
+- Python 3.10 support.
+
+Bug fixes:
+
+- Remove NUMA-related warnings when the machine does not have any NUMA nodes configured.
+- Fix bug during pre-processing for compressed decision trees.
+- Fix various issue with caching and pickling tree ensemble models.
+
+Snap ML v1.9.3 (Sep. 9, 2022)
+=================================
+
+Performance improvements:
+
+- Tree ensemble inference now leverages vector instructions on Power systems.
+
+
+Snap ML v1.9.2 (Aug. 31, 2022)
+=================================
+
+Bug fixes:
+
+- Fix issue with binary incompatibility between Linux/MacOS and Windows.
+- BoostingMachine: Fix overflow issue for heterogeneous ensembles on very large data.
+- MultiOutputCalibratedClassifier: support for RBF kernels.
+- BatchedTreeEnsemble: better handling of default SnapRandomForest.
+- BatchedTreeEnsemble: add base_score calculation.
+- BatchedTreeEnsemble: support calling partial_fit after fit.
+- GeneralizedLinearModels: fix issue with RBFSampler transform function on s390x.
+
+API changes:
+
+- Added generic import_model function that can detect the ensemble and type task from the PMML file.
+- Added option remap_feature_indices to score imported models using only the features that are listed in the model file.
+
+Snap ML v1.9.1 (May 31, 2022)
+=================================
+
+New features:
+
+- New export_model method for RandomForest[Classifier/Regressor] and BoostingMachine[Classifier/Regressor].
+
+Bug fixes:
+
+- Support importing ensembles from PMML that were trained using sample weights.
+
+API changes:
+
+- Expose import_model method in BoostingMachine[Classifier/Regressor].
+- Expose optimize_trees method in RandomForest[Classifier/Regressor] and BoostingMachine[Classifier/Regressor].
+
 Snap ML v1.9.0 (Apr. 1, 2022)
 =================================
 
