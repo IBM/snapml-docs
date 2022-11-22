@@ -8,7 +8,7 @@ Snap ML v1.10.2 (Nov. 18, 2022)
 
 API changes:
 
-- When using the generic import_model function, if the z16 AI accelerator is detected, we set the number of CPU threads automatically based on the detected number of cores.
+- When using the generic import_model function, if the IBM z16™ AI accelerator is detected, we set the number of CPU threads automatically based on the detected number of cores.
 
 Bug fixes:
 
@@ -26,8 +26,8 @@ Snap ML v1.10.0 (Oct. 26, 2022)
 
 New features:
 
-- Significantly improved inference engine for tree ensembles on Z16 AI accelerator.
-- Automatic selection of zdnn_tensors vs. compress_trees based on HW availability.
+- Significantly improved inference engine for tree ensembles on IBM z16™ AI accelerator.
+- Automatic selection of zdnn_tensors vs. compress_trees based on hardware availability.
 
 
 Snap ML v1.9.7 (Oct. 25, 2022)
@@ -50,7 +50,7 @@ Snap ML v1.9.5 (Oct. 7, 2022)
 
 Bug fixes:
 
-- Used features lists features in the same order that they appear in schema.
+- Attribute :attr:`used_features_` lists features in the same order that they appear in :attr:`schema_` attribute.
 
 
 Snap ML v1.9.4 (Sep. 24, 2022)
@@ -58,7 +58,7 @@ Snap ML v1.9.4 (Sep. 24, 2022)
 
 New features:
 
-- Populate schema_ attribute when importing PPML models via generic import API.
+- Populate :attr:`schema_` attribute when importing PPML models via generic import API.
 - Python 3.10 support.
 
 Bug fixes:
@@ -72,50 +72,46 @@ Snap ML v1.9.3 (Sep. 9, 2022)
 
 Performance improvements:
 
-- Tree ensemble inference now leverages vector instructions on Power systems.
-
+- Tree ensemble inference now leverages vector instructions on IBM Power™ systems.
 
 Snap ML v1.9.2 (Aug. 31, 2022)
 =================================
 
 Bug fixes:
-
-- Fix issue with binary incompatibility between Linux/MacOS and Windows.
-- BoostingMachine: Fix overflow issue for heterogeneous ensembles on very large data.
-- MultiOutputCalibratedClassifier: support for RBF kernels.
-- BatchedTreeEnsemble: better handling of default SnapRandomForest.
-- BatchedTreeEnsemble: add base_score calculation.
-- BatchedTreeEnsemble: support calling partial_fit after fit.
-- GeneralizedLinearModels: fix issue with RBFSampler transform function on s390x.
+    - Fix issue with binary incompatibility between Linux/MacOS and Windows.
+    - BoostingMachine: Fix overflow issue for heterogeneous ensembles on very large data.
+    - MultiOutputCalibratedClassifier: support for RBF kernels.
+    - BatchedTreeEnsemble: better handling of default SnapRandomForest.
+    - BatchedTreeEnsemble: add base_score calculation.
+    - BatchedTreeEnsemble: support calling partial_fit after fit.
+    - ModelImport: improved error handling.
+    - GeneralizedLinearModels: fix issue with RBFSampler transform function on s390x.
 
 API changes:
-
-- Added generic import_model function that can detect the ensemble and type task from the PMML file.
-- Added option remap_feature_indices to score imported models using only the features that are listed in the model file.
+    - Added generic :func:`import_model` function that can detect the ensemble and type task from the PMML file.
+    - Added option :attr:`remap_feature_indices` to score imported models using only the features that are listed in the model file.
 
 Snap ML v1.9.1 (May 31, 2022)
 =================================
 
 New features:
-
-- New export_model method for RandomForest[Classifier/Regressor] and BoostingMachine[Classifier/Regressor].
+    - New export_model method for RandomForest[Classifier/Regressor] and BoostingMachine[Classifier/Regressor].
 
 Bug fixes:
-
-- Support importing ensembles from PMML that were trained using sample weights.
+    - Support importing ensembles from PMML that were trained using sample weights.
+    - Fix reference counting for PyNone.
+    - Improved memory management for inference engine on IBM z16™ AI accelerator.
 
 API changes:
-
-- Expose import_model method in BoostingMachine[Classifier/Regressor].
-- Expose optimize_trees method in RandomForest[Classifier/Regressor] and BoostingMachine[Classifier/Regressor].
+    - Expose import_model method in BoostingMachine[Classifier/Regressor].
+    - Expose optimize_trees method in RandomForest[Classifier/Regressor] and BoostingMachine[Classifier/Regressor].
 
 Snap ML v1.9.0 (Apr. 1, 2022)
 =================================
 
 New features:
 
-- New matrix-based algorithms for tree-ensemble inference using zDNN library (available for Z16 systems only).
-
+- New matrix-based algorithms for tree-ensemble inference using zDNN library (available for IBM z16™ systems only).
 
 Snap ML v1.8.12 (Oct. 28, 2022)
 =================================
@@ -286,7 +282,7 @@ Snap ML v1.7.7 (Jul. 21, 2021)
 ==============================
 
 * Added support for A100 GPUs
-* Fixed unit-tests that were failing on POWER systems when using multiple GPUs
+* Fixed unit-tests that were failing on IBM Power™ systems when using multiple GPUs
 
 
 Snap ML v1.7.6 (Jun. 18, 2021)
@@ -299,7 +295,7 @@ Snap ML v1.7.5 (Jun. 17, 2021)
 ==============================
 
 * Relaxed numpy dependency to be >= 1.19.0
-* Added support for reading ONNX files generated on Z systems
+* Added support for reading ONNX files generated on IBM Z™ systems
 
 
 Snap ML v1.7.4 (Jun. 11, 2021)
