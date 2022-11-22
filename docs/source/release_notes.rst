@@ -10,34 +10,6 @@ Bug-fixes:
 
 * Support older machines that do not have AVX2 instructions.
 
-Snap ML v1.8.0 (November 11, 2021)
-==================================
-
-New Features:
-
-* Python 3.9 support (Python 3.6 is no longer supported).
-* Accelerated scoring of random forest models trained in scikit-learn via PMML or ONNX import.
-* Faster tree ensemble inference.
-* Support for multiclass classification in BoostingMachineClassifier.
-* Feature importance for boosting machines.
-* New estimators to support batched training of tree ensembles on very large datasets.
-
-API Changes:
-
-* Setter functions are provided for all estimators to change parameters for training and inference.
-* Deprecated setting n_jobs at inference time as argument to predict.
-* Expose intercept attribute for GLMs.
-* Reorganization of Booster parameters.
-
-Bug-fixes:
-
-* Enforce user-specific n_jobs for multiclass SVM.
-* Fixed PY_SSIZE_T_CLEAN warnings for newer versions of Python.
-* Fixed bug when serializing compressed trees in heterogeneous ensemble.
-* Fixed race condition for exact regression trees.
-* Fixed segfault when calling decision_function for multiclass SVM.
-* Fixed memory issue for boosting machines with subsample<1.
-
 
 Snap ML v1.7.7 (July 21, 2021)
 ==============================
