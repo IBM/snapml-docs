@@ -3,6 +3,77 @@ Release Notes
 
 The latest stable version of Snap ML is available at https://pypi.org/project/snapml/.
 
+Snap ML v1.10.2 (Nov. 18, 2022)
+=================================
+
+API changes:
+
+- When using the generic import_model function, if the IBM z16™ AI accelerator is detected, we set the number of CPU threads automatically based on the detected number of cores.
+
+Bug fixes:
+
+- Supporting a larger variety of compression types applied to disjoint tree sets within the same ensemble.
+
+Snap ML v1.10.1 (Nov. 3, 2022)
+=================================
+
+Bug fixes:
+
+- Fix segfault when scoring certain PMML files.
+
+Snap ML v1.10.0 (Oct. 26, 2022)
+=================================
+
+New features:
+
+- Significantly improved inference engine for tree ensembles on IBM z16™ AI accelerator.
+- Automatic selection of zdnn_tensors vs. compress_trees based on hardware availability.
+
+
+Snap ML v1.9.7 (Oct. 25, 2022)
+=================================
+
+Bug fixes:
+
+- Raise exception when importing PMML that contains no trees.
+
+Snap ML v1.9.6 (Oct. 20, 2022)
+=================================
+
+Packaging changes:
+
+- Make numpy dependency conditional on Python version.
+
+
+Snap ML v1.9.5 (Oct. 7, 2022)
+=================================
+
+Bug fixes:
+
+- Attribute :attr:`used_features_` lists features in the same order that they appear in :attr:`schema_` attribute.
+
+
+Snap ML v1.9.4 (Sep. 24, 2022)
+=================================
+
+New features:
+
+- Populate :attr:`schema_` attribute when importing PPML models via generic import API.
+- Python 3.10 support.
+
+Bug fixes:
+
+- Remove NUMA-related warnings when the machine does not have any NUMA nodes configured.
+- Fix bug during pre-processing for compressed decision trees.
+- Fix various issue with caching and pickling tree ensemble models.
+
+Snap ML v1.9.3 (Sep. 9, 2022)
+=================================
+
+Performance improvements:
+
+- Tree ensemble inference now leverages vector instructions on IBM Power™ systems.
+
 Snap ML v1.9.2 (Aug. 31, 2022)
 =================================
 
@@ -29,7 +100,7 @@ New features:
 Bug fixes:
     - Support importing ensembles from PMML that were trained using sample weights.
     - Fix reference counting for PyNone.
-    - Improved memory management for inference engine on z16 AI accelerator.
+    - Improved memory management for inference engine on IBM z16™ AI accelerator.
 
 API changes:
     - Expose import_model method in BoostingMachine[Classifier/Regressor].
@@ -40,7 +111,74 @@ Snap ML v1.9.0 (Apr. 1, 2022)
 
 New features:
 
-- New matrix-based algorithms for tree-ensemble inference using zDNN library (available for Z16 systems only).
+- New matrix-based algorithms for tree-ensemble inference using zDNN library (available for IBM z16™ systems only).
+
+Snap ML v1.8.12 (Oct. 28, 2022)
+=================================
+
+Bug fixes:
+
+- BatchedTreeEnsemble: handle case when some classes are not present in batch.
+
+Snap ML v1.8.11 (Oct. 18, 2022)
+=================================
+
+Packaging changes:
+
+- Make numpy dependency conditional on Python version.
+
+Snap ML v1.8.10 (Sep. 15, 2022)
+=================================
+
+Features:
+
+- Python 3.10 support.
+
+Bug fixes:
+
+- Do not print NUMA warnings on machines where no NUMA nodes are configured.
+
+Packaging notes:
+
+- Linux/x86 wheels are now built with manylinux2014 platform tag (manylinux2010 reached EOL in 2020).
+- Runtime numpy dependency is now numpy>=1.21.3 since this is the oldest release that supports Python 3.7, 3.8, 3.9 and 3.10.
+
+Snap ML v1.8.9 (Aug. 11, 2022)
+=================================
+
+Bug-fixes:
+
+- Fix overflow issue for heterogeneous BoostingMachines on very large data.
+- Support for RBF kernels in MultiOutputCalibratedClassifier. 
+
+Snap ML v1.8.8 (Jul. 20, 2022)
+=================================
+
+Bug-fixes:
+
+- Better handling of default SnapRandomForest inside BatchedTreeEnsemble.
+
+Snap ML v1.8.7 (Jun. 20, 2022)
+=================================
+
+Bug-fixes:
+
+- Improved classes logic in BatchedTreeEnsemble.
+
+Snap ML v1.8.6 (Jun. 16, 2022)
+=================================
+
+Bug-fixes: 
+
+- Add base score computation to BatchedTreeEnsemble.
+- Fix issue with binary incompatibility between Linux/MacOS and Windows.
+
+Snap ML v1.8.5 (Apr. 22, 2022)
+=================================
+
+Bug-fixes:
+
+- BatchedTreeEnsemble: call to fit is now equivalent to calling partial_fit on first batch.
 
 Snap ML v1.8.4 (Feb. 24, 2022)
 =================================
@@ -105,13 +243,6 @@ Bug-fixes:
 - Fix issue when deepcopying estimators that were not yet fitted.
 - Fix documentation in BoostingMachineClassifier.
 
-Snap ML v1.7.8 (Nov. 19, 2021)
-==================================
-
-Bug-fixes:
-
-* Support older machines that do not have AVX2 instructions.
-
 Snap ML v1.8.0 (Nov. 11, 2021)
 ==================================
 
@@ -140,12 +271,18 @@ Bug-fixes:
 * Fixed segfault when calling decision_function for multiclass SVM.
 * Fixed memory issue for boosting machines with subsample<1.
 
+Snap ML v1.7.8 (Nov. 19, 2021)
+==================================
+
+Bug-fixes:
+
+* Support older machines that do not have AVX2 instructions.
 
 Snap ML v1.7.7 (Jul. 21, 2021)
 ==============================
 
 * Added support for A100 GPUs
-* Fixed unit-tests that were failing on POWER systems when using multiple GPUs
+* Fixed unit-tests that were failing on IBM Power™ systems when using multiple GPUs
 
 
 Snap ML v1.7.6 (Jun. 18, 2021)
@@ -158,7 +295,7 @@ Snap ML v1.7.5 (Jun. 17, 2021)
 ==============================
 
 * Relaxed numpy dependency to be >= 1.19.0
-* Added support for reading ONNX files generated on Z systems
+* Added support for reading ONNX files generated on IBM Z™ systems
 
 
 Snap ML v1.7.4 (Jun. 11, 2021)

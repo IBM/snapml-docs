@@ -27,8 +27,10 @@ To install Snap ML:
 
 In order to use GPU acceleration one should have CUDA 10.2 (or higher) installed.
 
+If using IBM Z™ (s390x), please see addition notes :ref:`below<Znotes>`.
+
 RHEL/CentOS
-=============
+===========
 
 On RHEL/CentOS we support Intel™ (x86_64), IBM Power™ (ppc64le) and IBM Z™ (s390x) architectures.
 
@@ -40,6 +42,23 @@ To install Snap ML:
     pip install snapml    
 
 In order to use GPU acceleration one should have CUDA 10.2 (or higher) installed.
+
+If using IBM Z™ (s390x), please see addition notes :ref:`below<Znotes>`.
+
+.. _Znotes:
+
+IBM Z™ (s390x)
+==============
+
+While Snap ML provides binary wheels for s390x on PyPI, the dependencies of Snap ML (e.g., scipy, numpy, scikit-learn) do not.
+It can take a long time to install from PyPI because these dependencies need to be compiled from source. 
+Therefore, on s390x we recommend using Anaconda to install the dependencies and then install Snap ML from PyPI:
+
+.. code-block:: bash
+
+    conda create -n snapenv python=3.10 numpy scipy scikit-learn
+    conda activate snapenv
+    pip install snapml
 
 MacOS
 =====
@@ -54,6 +73,10 @@ To install Snap ML:
     pip install snapml
 
 GPU acceleration is not currently supported on MacOS.
+
+Please note that there are `known issues <https://github.com/dmlc/xgboost/issues/7039>`_ with libomp v12.0.0 on MacOS that lead to segfaults. 
+For the time being, We recommend using libomp v11.1.0.
+
 
 Windows
 =======
