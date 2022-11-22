@@ -40,4 +40,6 @@ The `transform` function, on the other hand, receives an edge list as input, ins
 and extracts new features from the graph, which are appended to the input edge list as additional columns to form the output of this function.   
 The output edge list is again a two dimensional numpy array of floating point numbers, however, with additional columns to store the new features.
 
-.. autofunction:: snapml.GraphFeaturePreprocessor
+.. autoclass:: snapml.GraphFeaturePreprocessor
+   :inherited-members:
+   :members:
