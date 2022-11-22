@@ -3,6 +3,33 @@ Release Notes
 
 The latest stable version of Snap ML is available at https://pypi.org/project/snapml/.
 
+Snap ML v1.10.2 (Nov. 18, 2022)
+=================================
+
+API changes:
+
+- When using the generic import_model function, if the z16 AI accelerator is detected, we set the number of CPU threads automatically based on the detected number of cores.
+
+Bug fixes:
+
+- Supporting a larger variety of compression types applied to disjoint tree sets within the same ensemble.
+
+Snap ML v1.10.1 (Nov. 3, 2022)
+=================================
+
+Bug fixes:
+
+- Fix segfault when scoring certain PMML files.
+
+Snap ML v1.10.0 (Oct. 26, 2022)
+=================================
+
+New features:
+
+- Significantly improved inference engine for tree ensembles on Z16 AI accelerator.
+- Automatic selection of zdnn_tensors vs. compress_trees based on HW availability.
+
+
 Snap ML v1.9.7 (Oct. 25, 2022)
 =================================
 
