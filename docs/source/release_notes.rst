@@ -3,6 +3,14 @@ Release Notes
 
 The latest stable version of Snap ML is available at https://pypi.org/project/snapml/.
 
+
+Snap ML v1.11.1 (Nov. 29, 2022)
+=================================
+
+Documentation:
+
+- Updated the documentation of the GraphFeaturePreprocessor class
+
 Snap ML v1.11.0 (Nov. 22, 2022)
 =================================
 
