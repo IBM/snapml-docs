@@ -9,7 +9,7 @@ Snap ML v1.11.1 (Nov. 29, 2022)
 
 Documentation:
 
-- Fixed docstrings for the GraphFeaturePreprocessor
+- Updated the documentation of the GraphFeaturePreprocessor class
 
 Snap ML v1.11.0 (Nov. 22, 2022)
 =================================
