@@ -3,6 +3,18 @@ Release Notes
 
 The latest stable version of Snap ML is available at https://pypi.org/project/snapml/.
 
+Snap ML v1.12.0 (Jan. 31, 2023)
+=================================
+
+New features:
+
+- Further improved inference engine for tree ensembles on IBM z16™ AI accelerator.
+- Support for Poisson regression loss in boosting machines.
+
+Bug fixes:
+
+- :class: `BatchedTreeEnsemble`: handle case when some classes are not present in batch.
+- Various documentation improvements.
 
 Snap ML v1.11.1 (Nov. 29, 2022)
 =================================
