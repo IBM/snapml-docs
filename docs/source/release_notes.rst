@@ -22,7 +22,7 @@ Snap ML v1.14.1 (Jul. 23, 2023)
 New features:
 
 - Add Python 3.11 support and drop support for Python 3.7 (EOL).
-- Support for quantile loss in BoostingMachineRegressor. 
+- Support for quantile loss in `BoostingMachineRegressor`. 
 - Updates for Graph Preprocessor.
 
 Bug fixes:
