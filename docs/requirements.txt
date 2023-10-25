@@ -1,2 +1,3 @@
 numpydoc
+sphinx-rtd-theme
 snapml==1.12.1
