@@ -3,6 +3,21 @@ Release Notes
 
 The latest stable version of Snap ML is available at https://pypi.org/project/snapml/.
 
+Snap ML v1.13.1 (Oct. 24, 2023)
+=================================
+
+Bug fixes:
+
+- Fix hanging for SVM with RBF kernel on IBM Power™ architecture.
+
+Snap ML v1.13.0 (Mar. 23, 2023)
+=================================
+
+New features:
+
+- C++ API (e.g., headers + shared library) is now packaged within the Snap ML wheel.
+- Compressed tree ensembles now support multi-class classification.
+
 Snap ML v1.12.1 (Mar. 22, 2023)
 =================================
 
