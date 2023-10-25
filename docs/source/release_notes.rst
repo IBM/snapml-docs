@@ -3,6 +3,69 @@ Release Notes
 
 The latest stable version of Snap ML is available at https://pypi.org/project/snapml/.
 
+Snap ML v1.14.2 (Oct. 19, 2023)
+=================================
+
+New features:
+
+- New `GenericTreeEnsemble` C++ API.
+
+Bug fixes:
+
+- Fix bug when using `std::vector` input to `snapml::DenseDataset`.
+- Fix segfault for `MBITreeEnsemble`.
+- Fix hanging for SVM with RBF kernel on IBM Power™ architecture.
+
+Snap ML v1.14.1 (Jul. 23, 2023)
+=================================
+
+New features:
+
+- Add Python 3.11 support and drop support for Python 3.7 (EOL).
+- Support for quantile loss in `BoostingMachineRegressor`. 
+- Updates for Graph Preprocessor.
+
+Bug fixes:
+
+- Ensure thread safety in C++ API.
+
+Packaging:
+
+- In this release we switch to distributing `manylinux_2_28` wheels for all Linux platforms.
+
+Snap ML v1.14.0 (May 3, 2023)
+=================================
+
+Bug fixes:
+
+- Fix incorrect predictions with `zdnn_tensors` in certain cases.
+
+Packaging:
+
+- Wheels for `s390x` are now built using `manylinux_2_28`.
+
+Snap ML v1.13.1 (Oct. 24, 2023)
+=================================
+
+Bug fixes:
+
+- Fix hanging for SVM with RBF kernel on IBM Power™ architecture.
+
+Snap ML v1.13.0 (Mar. 23, 2023)
+=================================
+
+New features:
+
+- C++ API (e.g., headers + shared library) is now packaged within the Snap ML wheel.
+- Compressed tree ensembles now support multi-class classification.
+
+Snap ML v1.12.1 (Mar. 22, 2023)
+=================================
+
+Bug fixes:
+
+- Overflow issue for dense datasets.
+
 Snap ML v1.12.0 (Jan. 31, 2023)
 =================================
 
