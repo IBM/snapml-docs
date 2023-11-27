@@ -90,5 +90,5 @@ Next, install the Snap ML package via pip:
 
     pip install snapml
 
-GPU acceleration is not currently supported on Windows.
+Please note that certain features (GPU acceleration, Graph Feature Preprocessor) are not currently supported on Windows.
 
