@@ -3,6 +3,13 @@ Release Notes
 
 The latest stable version of Snap ML is available at https://pypi.org/project/snapml/.
 
+Snap ML v1.13.2 (Jan. 15, 2024)
+=================================
+
+Bug fixes:
+
+- Fix issue with missing feature importances for decision trees and random forests.
+
 Snap ML v1.13.1 (Oct. 24, 2023)
 =================================
 
