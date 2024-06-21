@@ -72,6 +72,13 @@ Packaging:
 
 - Wheels for `s390x` are now built using `manylinux_2_28`.
 
+Snap ML v1.13.2 (Jan. 15, 2024)
+=================================
+
+Bug fixes:
+
+- Fix issue with missing feature importances for decision trees and random forests.
+
 Snap ML v1.13.1 (Oct. 24, 2023)
 =================================
 
