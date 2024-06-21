@@ -51,3 +51,4 @@ Snap ML is a library for Machine Learning. The following models currently are su
    :hidden:
 
    model_import
+   pipeline_export
