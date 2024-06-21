@@ -3,6 +3,34 @@ Release Notes
 
 The latest stable version of Snap ML is available at https://pypi.org/project/snapml/.
 
+Snap ML v1.14.6 (Apr. 11, 2024)
+=================================
+
+Bug fixes:
+
+- Fix issue with feature importances for some estimators.
+
+Snap ML v1.14.5 (Dec. 12, 2023)
+=================================
+
+Bug fixes:
+
+- Raise exception when no features can be parsed from PMML file.
+
+Snap ML v1.14.4 (Nov. 29, 2023)
+=================================
+
+Bug fixes:
+
+- PMML import: support for scikit-learn models trained in 32-bit precision.
+
+Snap ML v1.14.3 (Nov. 29, 2023)
+=================================
+
+Bug fixes:
+
+- `GenericTreeEnsemble` exposes model schema after import.
+
 Snap ML v1.14.2 (Oct. 19, 2023)
 =================================
 
