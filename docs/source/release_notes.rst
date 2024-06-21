@@ -3,6 +3,60 @@ Release Notes
 
 The latest stable version of Snap ML is available at https://pypi.org/project/snapml/.
 
+Snap ML v1.15.6 (Apr. 23, 2024)
+=================================
+
+Bug fixes:
+
+- Fix concurrency issue during load testing in TIS.
+
+Snap ML v1.15.5 (Apr. 5, 2024)
+=================================
+
+Features:
+
+- Support for importing and exporting multi-class boosting models.
+
+Bug fixes:
+
+- Fix memory layout for `GraphFeaturePreprocessor`.
+- `OneHotEncoder`: use `sparse_output` rather than `sparse`.
+
+Snap ML v1.15.4 (Feb. 7, 2024)
+=================================
+
+Bug fixes:
+
+- Support gRPC input buffers for pre-processing.
+
+Snap ML v1.15.3 (Jan. 15, 2024)
+=================================
+
+Bug fixes:
+
+- Core dump using pre-processed data for prediction.
+
+Snap ML v1.15.2 (Jan. 8, 2024)
+=================================
+
+Bug fixes:
+
+- Extended `AnyDataset` public API to get number of examples.
+
+Snap ML v1.15.1 (Dec. 20, 2023)
+=================================
+
+Bug fixes:
+
+- Missing symbols in libsnapmlcore.so when using the Snap ML C++ API for preprocessing.
+
+Snap ML v1.15.0 (Dec. 12, 2023)
+=================================
+
+New feature:
+
+- Support for accelerated pre-processing at C++ level.
+
 Snap ML v1.14.6 (Apr. 11, 2024)
 =================================
 
