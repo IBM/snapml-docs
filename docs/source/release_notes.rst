@@ -3,6 +3,106 @@ Release Notes
 
 The latest stable version of Snap ML is available at https://pypi.org/project/snapml/.
 
+Snap ML v1.17.1 (Nov. 7, 2025)
+=================================
+
+Update README:
+
+- Added ZDNN supported version and ZDNN library path for Ubuntu.
+
+Bug fixes:
+
+- Implementation of fallback to CPU when libzdnn.so is unavilable, by two lib method.
+
+Snap ML v1.17.0 (Oct. 17, 2025)
+=================================
+
+New features:
+
+- Expose Graph Feature Preprocessor via C++ API.
+
+Bug fixes:
+
+- GfpEncoderTest crashes due to ImportError from deprecated NumPy API symbol in Python build & test cases are getting failed in Jenkins z16 Node.
+- When zdnn rpm are missing code flow should fall back to CPU Telum I/II
+- This returning Densedataset to nested vector float.
+
+Security fixes:
+
+- Fix SonarQube High & Medium Severity.
+- Make sure granting write access to others is safe here (#893)
+- Fix Sonar qube Buffer overflow High Severity in GraphFeaturesWrapper.cpp
+- Fix High Severity in GraphFeatures.cpp.
+- Fix medium level cppcheck warnings.
+
+Packaging changes:
+
+- Transition to RPM-based Package for Enhanced Build Environment in SnapML.
+
+Snap ML v1.16.4 (May. 2, 2025)
+=================================
+
+Packaging changes:
+
+- Update the zDNN version to v1.1.2
+
+Snap ML v1.16.3 (Apr. 1, 2024)
+=================================
+
+Bug fixes:
+
+- Align Snap ML ColumnTransformer Behavior with Python to Ensure Consistent Transformation Order.
+
+Secure engineering:
+
+- Run cppcheck with more extensive options and save output
+- Fix the high severity raised by cppcheck.
+
+Snap ML v1.16.2 (Jan. 23, 2025)
+=================================
+
+New features:
+
+- Significantly faster performance for batch preprocessing.
+Bug fixes:
+
+- C++ API: Prohibit loading a random forest model into a boosting model.
+- Make GraphFeaturePreprocessor compatible with sklearn ColumnTransformer.
+- Fixes to make Snap ML compatible with sklearn 1.6.x
+- Fix issue with flaky pre-processing test
+Security fixes:
+
+- Fix constrast scans
+Packaging changes:
+
+- Numpy 2.x support; Drop Python 3.8; Enable Python 3.12
+- Removal of MPI extension
+- Replace pkg_resources with importlib
+- Use setuptools_scm to extract version dynamically
+- Use default version schema for setuptools_scm
+- Install missing twine dependency keyring inside build images
+
+Snap ML v1.16.1 (Oct. 3, 2024)
+=================================
+
+Secure engineering:
+
+- Fixes to resolve critical issues from Contrast scan.
+
+Snap ML v1.16.0 (Aug. 12, 2024)
+=================================
+
+Features:
+
+- Extend Probability Computation to Include Both Negative and Positive Classes
+
+Snap ML v1.15.7 (Jul. 31, 2024)
+=================================
+
+Packaging:
+
+- Enforce numpy<2.0 dependency
+
 Snap ML v1.15.6 (Apr. 23, 2024)
 =================================
 
