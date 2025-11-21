@@ -29,6 +29,24 @@ In order to use GPU acceleration one should have CUDA 10.2 (or higher) installed
 
 If using IBM Z™ (s390x), please see addition notes :ref:`below<Znotes>`.
 
+ZDNN support:
+
+    SnapML is compatible with ZDNN version **1.1.***
+
+For Ubuntu-based systems:
+
+- If SnapML does not automatically detect libzdnn from your system path even though it is installed, explicitly specify the ZDNN library path:
+
+.. code-block:: bash
+
+    export LD_LIBRARY_PATH=<path to your zdnn lib folder>
+
+- If you want to override the default ZDNN library with your own custom-built version, provide the absolute path to the .so file:
+
+.. code-block:: bash
+
+    export SNAPML_ZDNN_LIB=<path to your zdnn libzdnn.so>
+
 RHEL/CentOS
 ===========
 
