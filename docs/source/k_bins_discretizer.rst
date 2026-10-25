@@ -9,7 +9,7 @@ snapml.preprocessing.KBinsDiscretizer
 
    Parameters
    ----------
-   n_bins : int or array-like of shape (n_features,), default=5
+   n_bins : int or array-like of shape (n_features), default=5
        The number of bins to produce. Raises ``ValueError`` if ``n_bins < 2``.
 
    encode : {'onehot', 'onehot-dense', 'ordinal'}, default='onehot'
@@ -37,16 +37,16 @@ snapml.preprocessing.KBinsDiscretizer
 
    Attributes
    ----------
-   bin_edges_ : ndarray of ndarray of shape (n_features,)
-       The edges of each bin. Contain arrays of shape ``(n_bins + 1,)``.
+   bin_edges_ : ndarray of ndarray of shape (n_features)
+       The edges of each bin. Contain arrays of shape ``(n_bins + 1)``.
 
-   n_bins_ : ndarray of shape (n_features,), dtype=np.int_
+   n_bins_ : ndarray of shape (n_features), dtype=np.int_
        Number of bins for each feature.
 
    n_features_in_ : int
        Number of features seen during :meth:`fit`.
 
-   feature_names_in_ : ndarray of shape (n_features_in_,)
+   feature_names_in_ : ndarray of shape (n_features_in_)
        Names of features seen during :meth:`fit`. Defined only when ``X`` has feature names that are all strings.
 
    See Also

@@ -15,7 +15,7 @@ snapml.preprocessing.OneHotEncoder
        * ``'auto'`` : Determine categories automatically from the training data.
        * ``list`` : ``categories[i]`` holds the categories expected of the ``i``-th column. The passed categories should not mix strings and numeric values within a single feature, and should be sorted in case of numeric values.
 
-   drop : {'first', 'if_binary'} or array-like of shape (n_features,), default=None
+   drop : {'first', 'if_binary'} or array-like of shape (n_features), default=None
        Specifies a methodology to use to drop one of the categories per feature. This is useful in situations where perfectly collinear features cause problems:
 
        * ``None`` : retain all features (the default).
@@ -50,7 +50,7 @@ snapml.preprocessing.OneHotEncoder
    categories_ : list of arrays
        The categories of each feature determined during fitting (in order of the features in ``X`` and corresponding with the output of :meth:`transform`).
 
-   drop_idx_ : array of shape (n_features,)
+   drop_idx_ : array of shape (n_features)
        ``drop_idx_[i]`` is the index in ``categories_[i]`` of the category to be dropped for each feature. ``None`` if all categories are kept.
 
    infrequent_categories_ : list of ndarray
@@ -59,7 +59,7 @@ snapml.preprocessing.OneHotEncoder
    n_features_in_ : int
        Number of features seen during :meth:`fit`.
 
-   feature_names_in_ : ndarray of shape (n_features_in_,)
+   feature_names_in_ : ndarray of shape (n_features_in_)
        Names of features seen during :meth:`fit`. Defined only when ``X`` has feature names that are all strings.
 
    See Also

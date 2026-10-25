@@ -44,7 +44,7 @@ snapml.preprocessing.TargetEncoder
    n_features_in_ : int
        Number of features seen during :meth:`fit`.
 
-   feature_names_in_ : ndarray of shape (n_features_in_,)
+   feature_names_in_ : ndarray of shape (n_features_in_)
        Names of features seen during :meth:`fit`. Defined only when ``X`` has feature names that are all strings.
 
    See Also
@@ -76,7 +76,7 @@ snapml.preprocessing.TargetEncoder
       :param X: The data to determine the categories of each feature.
       :type X: array-like of shape ``(n_samples, n_features)``
       :param y: The target data.
-      :type y: array-like of shape ``(n_samples,)``
+      :type y: array-like of shape ``(n_samples)``
       :returns: **self** -- Fitted encoder.
       :rtype: object
 
@@ -87,7 +87,7 @@ snapml.preprocessing.TargetEncoder
       :param X: The data to encode.
       :type X: array-like of shape ``(n_samples, n_features)``
       :param y: Target data.
-      :type y: array-like of shape ``(n_samples,)``
+      :type y: array-like of shape ``(n_samples)``
       :returns: **Xt** -- Transformed input.
       :rtype: ndarray of shape ``(n_samples, n_features)``
 

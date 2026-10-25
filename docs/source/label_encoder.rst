@@ -13,7 +13,7 @@ snapml.preprocessing.LabelEncoder
 
    Attributes
    ----------
-   classes_ : ndarray of shape (n_classes,)
+   classes_ : ndarray of shape (n_classes)
        Holds the label for each class seen during :meth:`fit`.
 
    See Also
@@ -42,7 +42,7 @@ snapml.preprocessing.LabelEncoder
       Fit label encoder to target labels ``y``.
 
       :param y: Target values.
-      :type y: array-like of shape ``(n_samples,)``
+      :type y: array-like of shape ``(n_samples)``
       :returns: **self** -- Fitted encoder.
       :rtype: object
 
@@ -51,9 +51,9 @@ snapml.preprocessing.LabelEncoder
       Fit label encoder and return encoded labels.
 
       :param y: Target values.
-      :type y: array-like of shape ``(n_samples,)``
+      :type y: array-like of shape ``(n_samples)``
       :returns: **y_enc** -- Encoded labels.
-      :rtype: ndarray of shape ``(n_samples,)``
+      :rtype: ndarray of shape ``(n_samples)``
 
    .. py:method:: get_params(deep=True)
 
@@ -69,9 +69,9 @@ snapml.preprocessing.LabelEncoder
       Transform labels back to original encoding.
 
       :param y: Target values.
-      :type y: array-like of shape ``(n_samples,)``
+      :type y: array-like of shape ``(n_samples)``
       :returns: **y_orig** -- Original labels.
-      :rtype: ndarray of shape ``(n_samples,)``
+      :rtype: ndarray of shape ``(n_samples)``
 
    .. py:method:: set_params(**params)
 
@@ -85,6 +85,6 @@ snapml.preprocessing.LabelEncoder
       Transform labels to normalized encoding.
 
       :param y: Target values.
-      :type y: array-like of shape ``(n_samples,)``
+      :type y: array-like of shape ``(n_samples)``
       :returns: **y_enc** -- Encoded labels.
-      :rtype: ndarray of shape ``(n_samples,)``
+      :rtype: ndarray of shape ``(n_samples)``

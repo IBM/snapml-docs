@@ -26,7 +26,7 @@ snapml.preprocessing.Normalizer
    n_features_in_ : int
        Number of features seen during :meth:`fit`.
 
-   feature_names_in_ : ndarray of shape (n_features_in_,)
+   feature_names_in_ : ndarray of shape (n_features_in_)
        Names of features seen during :meth:`fit`. Defined only when ``X`` has feature names that are all strings.
 
    See Also
