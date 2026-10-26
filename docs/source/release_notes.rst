@@ -3,19 +3,19 @@ Release Notes
 
 The latest stable version of Snap ML is available at https://pypi.org/project/snapml/.
 
-Snap ML v1.17.2 (Oct. 25, 2026)
-=================================
+Snap ML v1.17.2 (October 25, 2026)
+==================================
 
 New features:
 
-- Added support for scikit-learn compatible preprocessors under ``snapml.preprocessing``:
-  - ``OneHotEncoder``
-  - ``KBinsDiscretizer``
-  - ``Normalizer``
-  - ``OrdinalEncoder``
-  - ``TargetEncoder``
-  - ``LabelEncoder``
-  - ``SimpleImputer``
+- Added scikit-learn-compatible preprocessing utilities under snapml.preprocessing:
+- OneHotEncoder
+- KBinsDiscretizer
+- Normalizer
+- OrdinalEncoder
+- TargetEncoder
+- LabelEncoder
+- SimpleImputer
 
 Snap ML v1.17.1 (Nov. 7, 2025)
 =================================
