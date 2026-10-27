@@ -100,6 +100,13 @@ snapml.preprocessing.TargetEncoder
       :returns: **feature_names_out** -- Transformed feature names.
       :rtype: ndarray of str objects
 
+   .. py:method:: get_metadata_routing()
+
+      Get metadata routing of this object.
+
+      :returns: **routing** -- A ``MetadataRequest`` encapsulating routing information.
+      :rtype: MetadataRequest
+
    .. py:method:: get_params(deep=True)
 
       Get parameters for this estimator.
