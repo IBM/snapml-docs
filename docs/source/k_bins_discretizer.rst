@@ -73,10 +73,10 @@ snapml.preprocessing.KBinsDiscretizer
    >>> est.bin_edges_[0]
    array([-2., -1.,  0.,  1.])
    >>> est.inverse_transform(Xt)
-   array([[-1.5,  1.5],
-          [-0.5, -0.5],
-          [ 0.5,  0.5],
-          [ 0.5, -1.5]])
+   array([[-1.5,  1.],
+          [-0.5,  0.],
+          [ 0.5,  1.],
+          [ 0.5, -1.]])
 
    .. note::
 
