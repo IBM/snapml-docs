@@ -1,7 +1,7 @@
 snapml.preprocessing.KBinsDiscretizer
 =====================================
 
-.. py:class:: snapml.preprocessing.KBinsDiscretizer(n_bins=5, *, encode='onehot', strategy='quantile', dtype=None, subsample=200000, random_state=None)
+.. py:class:: snapml.preprocessing.KBinsDiscretizer(n_bins=5, *, encode='onehot', strategy='quantile', quantile_method='averaged_inverted_cdf', dtype=None, subsample=200000, random_state=None)
 
    Bin continuous data into intervals.
 
@@ -25,6 +25,9 @@ snapml.preprocessing.KBinsDiscretizer
        * ``'uniform'`` : All bins in each feature have identical widths.
        * ``'quantile'`` : All bins in each feature have the same number of points.
        * ``'kmeans'`` : Values in each bin have the same nearest center of a 1D k-means cluster.
+
+   quantile_method : str, default='averaged_inverted_cdf'
+       Method used to compute the quantiles when ``strategy='quantile'``. Supported quantile estimation methods are compatible with NumPy's ``percentile`` / ``quantile`` method parameter (e.g. ``'averaged_inverted_cdf'``, ``'inverted_cdf'``, ``'averaged_weibull'``, ``'closest_observation'``, etc.).
 
    dtype : {np.float32, np.float64}, default=None
        The desired dtype for output. If None, output dtype is ``np.float64``.
@@ -141,12 +144,32 @@ snapml.preprocessing.KBinsDiscretizer
       :returns: **Xinv** -- Data with values corresponding to bin centers.
       :rtype: ndarray
 
+   .. py:method:: set_fit_request(*, sample_weight='$UNCHANGED$')
+
+      Request metadata passed to the ``fit`` method.
+
+      Note that this method is only relevant if metadata routing is enabled.
+
+      :param sample_weight: Metadata routing for ``sample_weight`` parameter in ``fit``.
+      :type sample_weight: bool, None, or str, default='$UNCHANGED$'
+      :returns: **self** -- Estimator instance.
+      :rtype: object
+
    .. py:method:: set_num_threads(n=4)
 
       Set the number of OMP threads used by the C++ backend.
 
       :param n: Number of threads. Must be a non-negative integer.
       :type n: int, default=4
+      :returns: **self** -- Estimator instance.
+      :rtype: object
+
+   .. py:method:: set_output(*, transform=None)
+
+      Set output container.
+
+      :param transform: Configure output of ``transform`` and ``fit_transform``.
+      :type transform: {"default", "pandas", "polars"}, default=None
       :returns: **self** -- Estimator instance.
       :rtype: object
 

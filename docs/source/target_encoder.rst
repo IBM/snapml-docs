@@ -116,12 +116,30 @@ snapml.preprocessing.TargetEncoder
       :returns: **params** -- Parameter names mapped to their values.
       :rtype: dict
 
+   .. py:method:: set_fit_request(*, sample_weight='$UNCHANGED$')
+
+      Request metadata passed to the ``fit`` method.
+
+      :param sample_weight: Metadata routing for ``sample_weight`` parameter in ``fit``.
+      :type sample_weight: bool, None, or str, default='$UNCHANGED$'
+      :returns: **self** -- Estimator instance.
+      :rtype: object
+
    .. py:method:: set_num_threads(n=4)
 
       Set the number of OMP threads used by the C++ backend.
 
       :param n: Number of threads. Must be a non-negative integer.
       :type n: int, default=4
+      :returns: **self** -- Estimator instance.
+      :rtype: object
+
+   .. py:method:: set_output(*, transform=None)
+
+      Set output container.
+
+      :param transform: Configure output of ``transform`` and ``fit_transform``.
+      :type transform: {"default", "pandas", "polars"}, default=None
       :returns: **self** -- Estimator instance.
       :rtype: object
 

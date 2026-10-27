@@ -85,6 +85,13 @@ snapml.preprocessing.Normalizer
       :returns: **feature_names_out** -- Transformed feature names.
       :rtype: ndarray of str objects
 
+   .. py:method:: get_metadata_routing()
+
+      Get metadata routing of this object.
+
+      :returns: **routing** -- A ``MetadataRequest`` encapsulating routing information.
+      :rtype: MetadataRequest
+
    .. py:method:: get_params(deep=True)
 
       Get parameters for this estimator.
@@ -100,6 +107,15 @@ snapml.preprocessing.Normalizer
 
       :param n: Number of threads. Must be a non-negative integer.
       :type n: int, default=4
+      :returns: **self** -- Estimator instance.
+      :rtype: object
+
+   .. py:method:: set_output(*, transform=None)
+
+      Set output container.
+
+      :param transform: Configure output of ``transform`` and ``fit_transform``.
+      :type transform: {"default", "pandas", "polars"}, default=None
       :returns: **self** -- Estimator instance.
       :rtype: object
 
