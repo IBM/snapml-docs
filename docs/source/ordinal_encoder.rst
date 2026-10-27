@@ -94,6 +94,15 @@ snapml.preprocessing.OrdinalEncoder
       :returns: **Xt** -- Transformed input.
       :rtype: ndarray of shape ``(n_samples, n_features)``
 
+   .. py:method:: get_feature_names_out(input_features=None)
+
+      Get output feature names for transformation.
+
+      :param input_features: Input features. If None, feature names seen during :meth:`fit` are used.
+      :type input_features: array-like of str or None, default=None
+      :returns: **feature_names_out** -- Transformed feature names.
+      :rtype: ndarray of str objects
+
    .. py:method:: get_params(deep=True)
 
       Get parameters for this estimator.
@@ -111,6 +120,15 @@ snapml.preprocessing.OrdinalEncoder
       :type X: array-like of shape ``(n_samples, n_features)``
       :returns: **X_tr** -- Inverted original categories.
       :rtype: ndarray of shape ``(n_samples, n_features)``
+
+   .. py:method:: set_num_threads(n=4)
+
+      Set the number of OMP threads used by the C++ backend.
+
+      :param n: Number of threads. Must be a non-negative integer.
+      :type n: int, default=4
+      :returns: **self** -- Estimator instance.
+      :rtype: object
 
    .. py:method:: set_params(**params)
 

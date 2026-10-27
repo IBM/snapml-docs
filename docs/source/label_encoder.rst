@@ -73,6 +73,15 @@ snapml.preprocessing.LabelEncoder
       :returns: **y_orig** -- Original labels.
       :rtype: ndarray of shape ``(n_samples)``
 
+   .. py:method:: set_num_threads(n=4)
+
+      Set the number of OMP threads used by the C++ backend.
+
+      :param n: Number of threads. Must be a non-negative integer.
+      :type n: int, default=4
+      :returns: **self** -- Estimator instance.
+      :rtype: object
+
    .. py:method:: set_params(**params)
 
       Set the parameters of this estimator.
