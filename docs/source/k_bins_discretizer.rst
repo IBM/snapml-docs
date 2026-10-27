@@ -59,7 +59,9 @@ snapml.preprocessing.KBinsDiscretizer
    >>> from snapml.preprocessing import KBinsDiscretizer
    >>> import numpy as np
    >>> X = [[-2, 1.5], [-1, -0.5], [0, 0.5], [1, -1.5]]
-   >>> est = KBinsDiscretizer(n_bins=3, encode='ordinal', strategy='uniform')
+   >>> est = KBinsDiscretizer(
+   ...     n_bins=3, encode='ordinal', strategy='uniform'
+   ... )
    >>> est.fit(X)
    KBinsDiscretizer(encode='ordinal', n_bins=3, strategy='uniform')
    >>> Xt = est.transform(X)
@@ -70,6 +72,15 @@ snapml.preprocessing.KBinsDiscretizer
           [2., 0.]])
    >>> est.bin_edges_[0]
    array([-2., -1.,  0.,  1.])
+   >>> est.inverse_transform(Xt)
+   array([[-1.5,  1.5],
+          [-0.5, -0.5],
+          [ 0.5,  0.5],
+          [ 0.5, -1.5]])
+
+   .. note::
+
+      ``inverse_transform()`` converts each bin index back to the midpoint of its bin edges. It does not recover the exact original values because discretization loses information.
 
    Methods
    -------
