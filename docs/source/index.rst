@@ -11,6 +11,7 @@ Snap ML is a library for Machine Learning. The following models currently are su
    * :doc:`support_vector_machine` (classification)
    * :doc:`decision_trees` (regression, classification)
    * :doc:`random_forests` (regression, classification)
+   * :doc:`isolation_forest` (anomaly detection)
    * :doc:`boosting_machines` (regression, classification)
    * :doc:`batched_tree_ensembles` (regression, classification)
    * :doc:`multioutput_calibrated_classifier` (classification)
@@ -34,6 +35,7 @@ Snap ML is a library for Machine Learning. The following models currently are su
    support_vector_machine
    decision_trees
    random_forests
+   isolation_forest
    boosting_machines
    batched_tree_ensembles
    multioutput_calibrated_classifier
