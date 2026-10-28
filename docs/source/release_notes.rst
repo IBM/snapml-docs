@@ -3,14 +3,6 @@ Release Notes
 
 The latest stable version of Snap ML is available at https://pypi.org/project/snapml/.
 
-Snap ML v1.9.0 (Nov. 27, 2026)
-=================================
-
-New features:
-
-- Added support for anomaly detection through the Isolation Forest model.
-
-
 Snap ML v1.17.1 (Nov. 7, 2025)
 =================================
 
