@@ -12,13 +12,14 @@ snapml.preprocessing.SimpleImputer
    missing_values : int, float, str, np.nan, None or pandas.NA, default=np.nan
        The placeholder for the missing values. All occurrences of ``missing_values`` will be imputed.
 
-   strategy : str, default='mean'
+   strategy : str or callable, default='mean'
        The imputation strategy:
 
        * ``'mean'`` : Replace missing values using the mean along each column. Can only be used with numeric data.
        * ``'median'`` : Replace missing values using the median along each column. Can only be used with numeric data.
        * ``'most_frequent'`` : Replace missing using the most frequent value along each column. Can be used with strings or numeric data.
        * ``'constant'`` : Replace missing values with ``fill_value``. Can be used with strings or numeric data.
+       * callable : A custom function used to compute the imputation value for each feature. The function is called once per column with a 1D array of the non-missing values of that column and must return a single scalar value.
 
    fill_value : str or numerical value, default=None
        When ``strategy='constant'``, ``fill_value`` is used to replace all occurrences of ``missing_values``. If None, ``fill_value`` will be 0 when imputing numerical data and "missing_value" for strings or object data types.
@@ -114,6 +115,11 @@ snapml.preprocessing.SimpleImputer
    .. py:method:: inverse_transform(X)
 
       Convert the data back to the original representation.
+
+      Inverts the ``transform`` operation performed on an array. This operation is available only when :class:`snapml.preprocessing.SimpleImputer` is instantiated with ``add_indicator=True``.
+
+      .. note::
+         ``inverse_transform`` can restore missing values only for features that have missing-value indicators. If a feature has no missing values during :meth:`fit`, no indicator is created for that feature, so the values imputed during :meth:`transform` cannot be restored by ``inverse_transform``.
 
       :param X: The transformed data matrix.
       :type X: {array-like, sparse matrix} of shape ``(n_samples, n_features)``
