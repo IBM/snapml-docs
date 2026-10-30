@@ -3,6 +3,26 @@ Release Notes
 
 The latest stable version of Snap ML is available at https://pypi.org/project/snapml/.
 
+Snap ML v1.19.0 (Nov 20, 2026)
+==================================
+
+New features:
+
+- Support for following preprocessing utilities under snapml.preprocessing:
+
+  - OneHotEncoder
+  - KBinsDiscretizer
+  - Normalizer
+  - OrdinalEncoder
+  - TargetEncoder
+  - LabelEncoder
+  - SimpleImputer
+
+- Support for Isolation Forest unsupervised machine learning algorithm for anomaly detection
+
+.. note::
+   The new features of preprocessing and Isolation Forest are available only in "IBM Z Accelerated for Snap ML v1.7.0" onwards. These new features are supported only in Linux on Z (s390x) platform and are not supported in other platforms such as x86, Power and Mac.
+
 Snap ML v1.17.1 (Nov. 7, 2025)
 =================================
 
